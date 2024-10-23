@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexia:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header / Navegación -->
     <header id="navbar">
         <nav>
             <div class="logo">
@@ -17,14 +16,18 @@
                     <img src="resources/Circo Maravillas Logo.png" alt="Logo Circo Maravillas" class="logo-img">
                 </a>
             </div>
-            <ul>
+            <ul id="navLinks">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="integrantes.html">Integrantes</a></li>
                 <li><a href="proyecto.html">Proyecto</a></li>
                 <li><a href="avances.html" class="active">Avances</a></li>
                 <li><a href="sitio.html">Sitio del Proyecto</a></li>
-            </ul>
-            <button class="dark-mode-toggle" onclick="toggleDarkMode()">Modo Oscuro</button>
+            </ul>            
+            <div class="menu-hamburger" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
         </nav>
     </header>
 
@@ -145,14 +148,10 @@
         </div>
     </section>
 
+    
     <footer>
         <p>&copy; 2024 Circo Maravillas. Todos los derechos reservados. Sitio desarrollado para uso educativo - Diseño y Desarrollo Web - UADE 2024</p>
-        <div class="icon">
-            <a href="index.html">
-                <img src="resources/Circo Maravillas Logo.png" alt="Logo Circo Maravillas" class="logo-img">
-            </a>
-        </div>
-    </footer>  
+    </footer>    
 
     <script src="script.js"></script>
 </body>

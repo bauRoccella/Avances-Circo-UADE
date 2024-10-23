@@ -20,21 +20,18 @@ window.addEventListener('scroll', function() {
         logo.style.transform = 'scale(1)';
     }
 });
-
-// Función para cambiar entre Modo Oscuro y Modo Claro
-function toggleDarkMode() {
-    const currentTheme = document.documentElement.getAttribute("data-theme");
-    const newTheme = currentTheme === "dark" ? "light" : "dark";
-
-    document.documentElement.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-}
-
-// Función para cargar el tema preferido al cargar la página
-function loadTheme() {
-    const savedTheme = localStorage.getItem("theme") || "light";
-    document.documentElement.setAttribute("data-theme", savedTheme);
-}
-
-// Ejecuta la función para cargar el tema al iniciar la página
-window.addEventListener("DOMContentLoaded", loadTheme);
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+  
+    menuToggle.addEventListener("click", function () {
+      menuToggle.classList.toggle("active");
+      navLinks.classList.toggle("show");
+  
+      if (navLinks.classList.contains("show")) {
+        document.body.classList.add("menu-open");
+      } else {
+        document.body.classList.remove("menu-open");
+      }
+    });
+  });

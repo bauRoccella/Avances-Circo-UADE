@@ -295,12 +295,14 @@ section {
     }
 }
 
-/* Contenedor de la sección de integrantes */
-.integrantes-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.integrantes-container h2 {
+    font-size: 2.5rem;
+    margin-top: 70px; /* Aumentar el margen superior */
+    margin-bottom: 30px;
+    color: white;
+    text-align: center;
 }
+
 
 /* Título de la sección */
 .integrantes-container h2 {
@@ -328,11 +330,10 @@ section {
     transition: transform 0.3s ease;
 }
 
-/* Imagen del integrante ocupando todo el contenedor */
 .integrante-img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+    width: 200px;
+    height: 250px; /* Asegúrate de que mantenga la proporción */
+    object-fit: cover; /* Evita recortes, ajusta la imagen al contenedor */
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     transition: transform 0.3s ease;
@@ -407,4 +408,64 @@ footer .icon img {
         align-items: center;
         gap: 10px;
     }
+}
+.menu-hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 20;
+  }
+  
+  .menu-hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+  @media (max-width: 860px) {
+  .menu-hamburger {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 60%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: right 0.3s ease;
+    list-style: none;
+    z-index: 10;
+    overflow: hidden;
+  }
+
+  nav ul li {
+    margin: 20px 0;
+  }
+
+  .menu-hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6.5px, 6.5px);
+  }
+
+  .menu-hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  nav ul.show {
+    right: 0;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
 }
