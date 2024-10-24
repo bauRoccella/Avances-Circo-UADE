@@ -251,6 +251,10 @@ section {
     border-radius: 10px;
 }
 
+.content > img {
+    width: 100%;
+}
+
 .dark-mode body {
     background: #121212;
     color: #e0e0e0;
